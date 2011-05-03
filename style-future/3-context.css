@@ -1,0 +1,804 @@
+@charset "utf-8";
+
+/*
+@prefix : <http://purl.org/net/ns/doas#> .
+<> a :CSSstylesheet;
+ :title "Vicuna Origin Style - Context";
+ :created "2007-07-26";
+ :release [:revision "1.1"; :created "2008-01-05"];
+ :author [:name "wu"; :homepage <http://vicuna.jp/>; :mbox "3ping.org@gmail.com"];
+ :license <http://creativecommons.org/licenses/by/3.0/>;
+ :description "文脈によって変わるスタイル定義";
+ :note "
+ 	Outline
+		3-1.div#header
+		3-2.div#content
+		3-3.div#main
+		3-4.div#utilities
+		3-5.div#footer" .
+*/
+
+/*======================================
+
+	3-1.div#header
+	
+=======================================*/
+
+div#header {
+	padding: 1px 0 10px;
+}
+
+/*--------------------------------------
+	3-1-1. Website Title
+---------------------------------------*/
+
+div#header p.siteName {
+	margin: 13px 4px 0;
+	line-height: 1;
+	font-family: "Lucida Sans", "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 159%;
+	font-weight: bold;
+}
+
+div#header p.siteName a {
+	color: #fff;
+	text-decoration: none;
+}
+
+div#header p.siteName a:hover {
+
+}
+
+/*--------------------------------------
+	3-1-2. Description
+---------------------------------------*/
+
+div#header p.description {
+	margin: 0 5px;
+	color: #eee;
+	font-size: 92%;
+}
+
+/*======================================
+
+	3-2.div#content
+	
+=======================================*/
+
+div#content {
+	position: relative;
+	background-color: #fff;
+	background-image: url(images/interface/bg_white_corner01.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+
+}
+
+div#content p.return {
+	margin: 0;
+	padding: 0.2em 20px 0.4em;
+	border-top: 1px solid #ddd;
+	border-bottom: 4px solid #d3d3d3;
+	text-align: right;
+	background: #fff url(images/common/slash01.png);
+}
+
+body.mainIndex h1 {
+	display: none; /*body.mainIndex*/
+}
+
+/*======================================
+
+	3-3. div#main
+	
+=======================================*/
+
+div#main {
+	padding: 1px 20px;
+	background-image: url(images/interface/bg_white_corner02.gif);
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+
+/*--------------------------------------
+	3-3-1. Topic Path
+---------------------------------------*/
+
+p.topicPath {
+	margin: 1.3em 9em 0.3em 0;
+	padding-bottom: 0.8em;
+	font-size: 85%;
+	line-height: 1;
+	color: #ccc;
+	font-family: Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	text-align: left;
+	text-justify: none; 
+	letter-spacing: 1px;
+}
+
+p.topicPath a:link,
+p.topicPath a:visited {
+	padding: 0.1em 0.5em;
+	border: 1px solid #eee;
+	color: #888;
+	background-color: #fff;
+	text-decoration: none;
+}
+
+p.topicPath a:hover {
+	color: #fff;
+	border: 1px solid #fff;
+	background-color: #222;
+}
+
+p.topicPath span.current {
+	padding: 0.1em 0 0.1em 13px;
+	color: #000;
+	background-image: url(images/icon/v_arrow080102.gif);
+	background-repeat: no-repeat;
+	background-position: 0 0.3em;
+}
+/*--------------------------------------
+	3-3-2. Flip Navi 1 (Newer | Older)
+---------------------------------------*/
+
+ul#flip1 {
+	margin-top: 1.3em;
+	margin-right: 15px;
+	padding: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	line-height: 1;
+}
+
+ul#flip1 li {
+	margin: 0;
+	display: inline;
+	font-size: 92%;
+}
+
+ul#flip1 li a {
+	padding: 0 5px;
+	color: #666;
+	background-repeat: no-repeat;
+	text-decoration: none;
+}
+
+/* Newer Article */
+
+ul#flip1 li.newer a {
+	padding-left: 18px;
+	background-image: url(images/icon/v_arrow070101.gif);
+	background-position: left center;
+}
+
+/* Older Article */
+
+ul#flip1 li.older a {
+	padding-left: 10px;
+	padding-right: 19px;
+	border-left: 1px solid #ccc;
+	background-image: url(images/icon/v_arrow070102.gif);
+	background-position: right center;
+}
+
+/* On Mouse */
+
+ul#flip1 li a:hover {
+	color: #000;
+}
+ 
+ul#flip1 li.newer a:hover {
+	background-image: url(images/icon/v_arrow070201.gif);
+}
+
+/* Older Article */
+
+ul#flip1 li.older a:hover {
+	background-image: url(images/icon/v_arrow070202.gif);
+}
+
+
+/*--------------------------------------
+	3-3-3. div.entry
+---------------------------------------*/
+
+div.entry {
+	padding: 1px 0;
+}
+
+/* 3-3-3-1. Entry Title
+-----------------------------*/
+
+div.entry h2 {
+	margin-bottom: 0;
+	padding: 0 0 0.3em 10px;
+	border-bottom: none;
+	border-left: 5px solid #666;
+	background: url(images/common/bg_line-dot.gif) left bottom repeat-x;
+}
+
+div.entry h2 a {
+	text-decoration: none;
+	padding-bottom: 0.2em;
+	_padding-bottom: 0;
+	background-repeat: no-repeat;
+	background-position: right center;
+	*background-position: right 0.3em; /* for IE6,7 */
+	*height: 1px; /* for IE6,7 */
+}
+
+div.entry h2 a:link {
+	color: #000;
+}
+
+div.entry h2 a:visited {
+	color: #000;
+}
+
+div.entry h2 a:hover {
+	color: #01b0f0;
+}
+
+/* お好みでコメント解除してください。permalinkバナーがつきます。
+div.entry h2 a {
+	padding-right: 90px;
+}
+
+div.entry h2 a:link {
+	ackground-image: url(images/icon/permalink01.gif);
+}
+
+div.entry h2 a:visited {
+	background-image: url(images/icon/permalink02.gif);
+}
+
+div.entry h2 a:hover {
+	background-image: url(images/icon/permalink04.gif);
+}
+*/
+
+
+/* 3-3-3-2. Entry Info
+-----------------------------*/
+
+div.entry ul.info {
+	margin: 0.4em 0;
+	padding: 0 20px 0.5em 20px;
+}
+
+div.entry ul.info li {
+	margin: 0 10px 0 0;
+	display: inline;
+	color: #999;
+	font-size: 85%;
+}
+
+div.entry ul.info li.date {
+
+}
+
+div.entry ul.info li.category {
+
+}
+
+div.entry ul.info li.category a {
+	padding: 0 5px 0 13px;
+	color: #999;
+	background-image: url(images/icon/list04.gif);
+	background-repeat: no-repeat;
+	background-position: 0 center;
+	_background-position: 0 0.5em;
+	text-transform: uppercase;
+}
+
+div.entry ul.info li.category a:hover {
+	color: #00b8fd;
+	background-image: url(images/icon/list03.gif);
+}
+
+/* 3-3-3-3. Text Body
+-----------------------------*/
+
+div.entry div.textBody {
+	margin: 10px 0 0 1px;
+	padding: 1px 0;
+	letter-spacing: 1px;
+}
+
+div.entry div.textBody h2 {
+	margin-top: 2em;
+}
+
+div.entry div.textBody dl,
+div.entry div.textBody ul,
+div.entry div.textBody ol {
+	border-left: 5px solid #eee;
+	border-bottom: 1px solid #fff;
+}
+
+/* Link img */
+
+div.textBody a img {
+	border: 3px solid #ccc;
+}
+
+div.textBody a:hover img {
+	border: 3px solid #00b8fd;
+}
+
+/* 3-3-3-4. Continue Reading
+-----------------------------*/
+
+p.continue {
+	clear: both;
+}
+
+p.continue a {
+	padding-left: 18px;
+	background-image: url(images/icon/v_icon190101.gif);
+	background-repeat: no-repeat;
+	background-position: 0 0.3em;
+}
+
+p.continue a:hover {
+	background-position: 2px 0.3em;
+}
+
+/* 3-3-3-5. Reaction
+-----------------------------*/
+
+div.entry ul.reaction {
+	margin-top: 0;
+	padding: 0.1em 0 0 0;
+	border-top: 4px solid #f5f5f5;
+	text-align: right;
+	_height: 1px; /* for IE */
+	min-height: 1px; /* for IE7 (peekaboo) */
+}
+
+div.entry ul.reaction li {
+	margin: 0 15px 0 0;
+	padding-left: 30px;
+	border-left: 2px solid #eee;
+	display: inline;
+	background-repeat: no-repeat;
+	background-position: 8px center;
+}
+
+div.entry ul.reaction li.comment {
+	background-image: url(images/icon/v_icon010101.gif);
+}
+
+div.entry ul.reaction li.trackback {
+	padding-left: 27px;
+	background-image: url(images/icon/v_icon080101.gif);
+}
+
+div.entry ul.reaction li a {
+	text-decoration: none;
+	color: #666;
+}
+
+div.entry ul.reaction li a:hover {
+	text-decoration: none;
+	color: #00b8fd;
+}
+
+/* 3-3-3-6. Flip Navi 2 (Newer | Older)
+-----------------------------*/
+
+#flip2 {
+	padding: 0.3em 0;
+	background-color: #f5f5f5;
+}
+
+#flip2 li {
+	color: #000;
+}
+
+#flip2 li a {
+
+}
+
+/* 3-3-3-7. Comment Log
+-----------------------------*/
+
+body.single div#comments {
+	margin: 0 0 0 -20px;
+	padding: 0.7em 0 1px 20px;
+	background: url(images/interface/bg_line01.gif) no-repeat;
+}
+
+div#comments h2 {
+	padding: 0 23px 0.4em;
+	border-left: none;
+	background-image: url(images/icon/v_icon010101.gif);
+	background-position: 0 0.4em;
+	background-repeat: no-repeat;
+}
+
+div#comments dl.log {
+
+}
+
+div#comments dl.log dt {
+	margin: 0;
+}
+
+div#comments dl.log dt span.name {
+	margin-right: 0.5em;
+	color: #000;
+}
+
+div#comments dl.log dt span.date {
+	color: #aaa;
+	font-size: 85%;
+}
+
+div#comments dl.log dd {
+	margin: 0 0 0.8em 0;
+	padding: 1px 0;
+	background: url(images/common/bg_line-dot.gif) left bottom repeat-x;
+}
+
+div#comments dl.log dd p {
+	margin: 0.5em 0 1em 0;
+}
+
+/* 3-3-3-8. Comment Post form
+-----------------------------*/
+
+form.post {
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+
+form.post dl {
+
+}
+
+form.post dl dt {
+	margin: 0;
+}
+
+form.post dl dd {
+	margin-left: 0;
+	margin-bottom: 0;
+}
+
+form.post dl input {
+	margin: 0;
+}
+
+form.post textArea {
+	margin: 0;
+}
+
+form.post div.action {
+	margin: 0 20px 1em;
+}
+
+form.post div.action input.submit {
+	margin: 0.4em 0;
+}
+
+/* 3-3-3-9. Trackback Log
+-----------------------------*/
+
+body.single div#trackback {
+	margin: 3em 0 0 -20px;
+	padding: 0.7em 0 1px 20px;
+	background: url(images/interface/bg_line01.gif) no-repeat;
+}
+
+div#trackback h2 {
+	padding: 0 18px 0.4em;
+	border-left: none;
+	background-image: url(images/icon/v_icon080101.gif);
+	background-position: 0 0.4em;
+	background-repeat: no-repeat;
+}
+
+div#trackback dl.log {
+	border-left: 5px solid #eee;
+}
+
+div#trackback dl.log dt {
+
+}
+
+div#trackback dl.log dd {
+	margin: 0;
+	padding: 0.4em 10px;
+	padding-bottom: 1em;
+	background: url(images/common/bg_line-dot.gif) left bottom repeat-x;
+}
+
+/* 3-3-3-10. Trackback Info
+-----------------------------*/
+
+div#trackback dl.info {
+	border-left: 5px solid #ccc;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	background-color: #fff;
+	background-image: url(images/common/slash01.png);
+}
+
+div#trackback dl.info dt {
+	padding-left: 13px;
+	color: #000;
+	background-image: url(images/icon/llist01.gif);
+	background-repeat: no-repeat;
+	background-position: 0 center;
+}
+
+div#trackback dl.info .URL {
+	padding: 0.2em 1em;
+	border-top: 1px solid #eee;
+	border-left: 1px solid #eee;
+	color: #000;
+	background-color: #fff;
+	background-image: url(images/common/light.gif);
+}
+
+/*======================================
+
+	3-4. div#utilities
+	
+=======================================*/
+
+div#utilities {
+	font-size: 93%;
+}
+
+div#utilities dl dt {
+
+}
+
+div#utilities dl dd {
+
+}
+
+div#utilities dl dd ul {
+
+}
+
+div#utilities dl dd ul li {
+	margin: 0.3em 10px;
+	color: #333;
+	list-style-position: outside;
+}
+
+div#utilities dl dd ul li a {
+
+}
+
+/* Sub Category */
+
+div#utilities dl dd ul li ul {
+
+}
+
+div#utilities dl dd ul li li {
+
+}
+
+/*--------------------------------------
+	3-4-1. dl.navi
+---------------------------------------*/
+
+div#utilities dl.navi {
+
+}
+
+div#utilities dl.navi dt {
+
+}
+
+div#utilities dl.navi dd {
+
+}
+
+div#utilities dl.navi dd ul {
+	list-style-type: none;
+
+}
+
+div#utilities dl.navi dd ul li a {
+	padding-left: 15px;
+	background-image: url(images/icon/arrow01.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	*background-position: 0 0.5em;
+}
+
+div#utilities dl.navi dd ul li a:hover {
+	background-image: url(images/icon/arrow02.gif) ;
+}
+
+/*--------------------------------------
+	3-4-2. dl.others
+---------------------------------------*/
+
+div#utilities dl.others {
+
+}
+
+div#utilities dl.others dt {
+
+}
+
+div#utilities dl.others dd {
+
+}
+
+div#utilities dl.others dd dl dd {
+
+}
+
+div#utilities dl.others dd ul {
+	list-style-type: circle;
+}
+
+/*	3-4-2-1. Search
+---------------------------------------*/
+
+div#utilities dl dd form {
+	margin: 0 5px 0 10px;
+	padding: 0.5em 5px;
+	border: 1px solid #eee;
+}
+
+div#utilities dl dd form fieldset {
+
+}
+
+div#utilities dl dd form legend {
+
+}
+
+div#utilities dl dd form input {
+
+}
+
+div#utilities dl dd form input.inputField {
+
+}
+
+/*--------------------------------------
+	3-4-3. div#utilities dl > dd > *
+---------------------------------------*/
+
+/*	3-4-3-1. dd > p
+-----------------------------*/
+
+div#utilities dl dd p {
+
+}
+
+/*	3-4-3-2. dd > list
+-----------------------------*/
+
+div#utilities dl dd dl dt {
+
+}
+
+div#utilities dl dd dl dt a {
+
+}
+
+div#utilities dl dd dl dd {
+
+}
+
+/*	3-4-3-3. dd > table
+-----------------------------*/
+
+div#utilities dl dd table {
+	margin: 0.4em 0;
+	width: 100%;
+	_width: 95%; /* for IE */
+}
+
+div#utilities dl dd table caption {
+	color: #01b0f0;
+	_padding-bottom: 0.4em;
+}
+
+div#utilities dl dd table th,
+div#utilities dl dd table td {
+	padding: 1px 10px;
+}
+
+/*	3-5-4. dd > Tag Cloud
+-----------------------------*/
+
+div#utilities dl dd ul.tagCloud {
+	margin: 0.5em 5px;
+	padding: 0.5em 8px;
+}
+
+div#utilities dl.others dd ul.tagCloud {
+	margin-left: 5px!important;
+}
+
+div#utilities dl dd ul.tagCloud li {
+	margin: 0;
+}
+
+div#utilities dl dd ul.tagCloud li a {
+	padding: 0 0 0 16px;
+	background-image: url(images/icon/v_icon020101.gif);
+	line-height: 0;
+}
+
+div#utilities dl dd ul.tagCloud li a:hover {
+	background-image: url(images/icon/v_icon020101.gif);
+}
+
+/*	3-5-5. dd > Photo thumbnail
+-----------------------------*/
+
+div#utilities dl dd ul.thumb {
+
+}
+
+div#utilities dl dd ul.thumb li {
+	margin: 5px 0 0 5px;
+}
+
+div#utilities dl dd ul.thumb li a {
+	padding: 0;
+	background-image: none;
+	border: none;
+}
+
+/*======================================
+
+	3-5.div#footer
+	
+=======================================*/
+
+div#footer {
+	padding: 1px 0;
+}
+
+div#footer ul.support {
+	margin: 0;
+	text-align: right;
+}
+
+div#footer ul.support li {
+	margin: 0 0 0 6px;
+	display: inline;
+	font-size: 85%;
+	color: #666;
+}
+
+div#footer ul.support li a {
+	color: #999;
+	text-decoration: none;
+}
+
+div#footer ul.support li a:hover {
+	color: #fff;
+}
+
+div#footer li.template a {
+
+}
+
+div#footer li.template a[title]:after {
+	content: " "attr(title);
+}
+
+div#footer address {
+	font-size: 92%;
+	margin: 0.2em 0;
+	text-align: right;
+	color: #333;
+}

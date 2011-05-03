@@ -1,0 +1,387 @@
+@charset "utf-8";
+
+/*
+@prefix : <http://purl.org/net/ns/doas#> .
+<> a :CSSstylesheet;
+ :title "Vicuna Future Style - Layout";
+ :created "2007-07-26";
+ :release [:revision "1.1"; :created "2008-01-05"];
+ :author [:name "wu"; :homepage <http://vicuna.jp/>; :mbox "3ping.org@gmail.com"];
+ :license <http://creativecommons.org/licenses/by/3.0/>;
+ :description "
+ 	context.cssからレイアウトに関するスタイルを抜き出したモジュール
+	[←★→]マークのついた指定を全て反転させることでカラム位置の左右入れ替えが可能です。
+	";
+ :note "
+ 	Outline
+		4-1.containers
+			4-2.[Single column]
+				4-2-1.div#utilities
+			4-3.[Double column]
+				4-3-1.div#main
+				4-3-2.div#utilities" .
+*/
+
+
+
+/*======================================
+
+	4-1.Containers Layout
+	
+=======================================*/
+
+body {
+	margin: 0 20px; /* margin */
+	text-align: center; /* Centering For IE6 */
+}
+
+div#header,
+div#content,
+div#footer {
+	margin: 0 auto; /* Centering */
+	width: 100%;  /* Change Fixed (800px | 60em) */
+	min-width: 46em; /* Min Width */
+	max-width: 70em; /* Max Width */
+	text-align: left;
+}
+
+/*======================================
+
+	4-2. [Single column]
+	bodyにclass="single"がついた時のレイアウト
+	
+=======================================*/
+
+body.single div#main {
+	_height: 1px; /* for IE peekaboo */
+}
+
+body.single div.entry ul.info {
+	padding: 0 20px 0.7em;
+	margin: 0.4em 20px;
+}
+
+body.single div.entry div.textBody {
+	margin: 10px 10px 0;
+}
+
+body.single ul#flip1 {
+	margin-top: 0.7em;
+}
+
+/*--------------------------------------
+	4-2-2. div#utilities
+---------------------------------------*/
+
+body.single div#utilities {
+	margin-top: 1em;
+	padding: 1.4em 0;
+	background: #f5f5f5 url(images/common/bg_grad02.png) repeat-x;
+}
+
+body.single div#utilities dl {
+	margin: 0;
+	background-color: #fff;
+	border-right: 1px solid #eaeaea;
+	border-bottom: 1px solid #eaeaea;
+}
+
+body.single div#utilities dl dt {
+	margin-bottom: 0;
+	padding: 0.1em 10px 0.3em 10px;
+	border-left: 5px solid #bbb;
+	color: #000;
+}
+
+body.single div#utilities dl dd {
+	margin: 0 10px 1em;
+	padding: 1px 0 0.5em;
+	border-left: 5px solid #ddd;
+	border-bottom: 1px solid #eee;
+	border-right: 1px solid #eee;
+	background: #f7f7f7 url(images/common/bg_line-dot.gif) left top repeat-x;
+}
+
+body.single div#utilities dl dd ul {
+	margin: 0;
+}
+
+body.single div#utilities dl dd dt {
+	margn: 0;
+	padding: 0 0 0.3em 0;
+	color: #333;
+	border: none;
+	background-color: transparent;
+}
+
+body.single div#utilities dl dd dd {
+	border: none;
+	background-image: none;
+}
+
+/* 4-2-2-1 dl.navi
+------------------------*/
+
+body.single div#utilities dl.navi {
+	margin-left: 10px;
+	display: inline; /* for WinIE */
+	float: left;
+	width: 340px;
+}
+
+/* 4-2-2-2 dl.others
+------------------------*/
+
+body.single div#utilities dl.others {
+	margin: 0 10px 0 360px;
+}
+
+body.single div#utilities dl.others ul {
+	margin: 0.2em 10px;
+}
+
+body.single div#utilities dl.others li {
+	margin: 0.2em 10px;
+}
+
+body.single div#utilities dl.others form {
+	margin: 0.5em 10px 0;
+}
+
+body.single div#utilities dl.others form legend {
+	display: none;
+}
+
+/*======================================
+
+	4-3. [Double column] body.double 
+	bodyにclass="double"がついた時のレイアウト
+	
+=======================================*/
+
+body.double div#content {
+	background-color: transparent;
+	background-image: url(images/interface/bg_div-content.gif);
+	background-repeat: no-repeat;
+}
+
+body.double h1 {
+	margin: 0 -20px 0.5em 0;
+
+}
+
+/*--------------------------------------
+	4-3-1. div#main
+---------------------------------------*/
+
+body.double div#main {
+	margin-left: 228px;
+	min-height: 1000px;
+	_height: 1000px; /* for IE */
+	background-color: #fff;
+	background-image: url(images/interface/bg_div-main.gif);
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+
+body.double div#main div {
+	margin-right: 0;
+	padding-right: 6px;
+}
+
+body.double div#main div.section div div {
+	margin-right: 0;
+}
+
+body.double div#main p.topicPath {
+	margin-top: 1.7em;
+	margin-left: 0;
+}
+
+body.double div#content p.return {
+	margin-left: 228px;
+}
+
+body.double div.entry ul.info {
+	margin: 0 0 0.2em;
+	padding: 0 15px 0.2em 10px;
+	background-image: none;
+	border-left: 5px solid #ccc;
+	border-bottom: 1px solid #eee; 
+	background-color: #f5f5f5;
+}
+
+/*--------------------------------------
+	4-3-2. div#utilities
+---------------------------------------*/
+
+body.double div#utilities {
+	margin-top: 15px;
+	padding-bottom: 6px;
+	width: 228px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #fff url(images/interface/bg_div-utilities.gif) left bottom no-repeat;
+}
+
+body.double div#utilities dl {
+	margin: 0;
+}
+
+body.double div#utilities dl dt {
+	margin: 0 17px;
+	line-height: 1;
+	color: #333;
+	font-size: 85%;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+body.double div#utilities dl dd {
+	margin: 0;
+	_height: 1px; /* for IE */
+}
+
+body.double div#utilities dl dd ul {
+	margin: 6px 0 0 15px;
+}
+
+body.double div#utilities dl dd ul li {
+
+}
+
+body.double div#utilities dl dd ul li a {
+	text-decoration: none;
+}
+
+/* Sub Category */
+
+body.double div#utilities dl dd ul li ul {
+	margin: 0;
+	padding: 0;
+
+}
+
+body.double div#utilities dl dd ul li li {
+	margin: 0.3em 0 0 10px;
+}
+
+/*--------------------------------------
+	4-4-1. dl.navi
+---------------------------------------*/
+
+body.double div#utilities dl.navi {
+	background: url(images/interface/bg_dl-navi.gif) repeat-y;
+}
+
+body.double div#utilities dl.navi dt {
+	margin-top: 0.1em;
+}
+
+body.double div#utilities dl.navi dd {
+	padding-bottom: 38px;
+	background: url(images/interface/bg_dl-navi_dd.gif) left bottom no-repeat;
+}
+
+body.double div#utilities dl.navi dd ul {
+	margin-right: 5px;
+	padding-bottom: 0.4em;
+	background: #f5f5f5 url(images/interface/bg_dl-navi_ul.gif) left bottom no-repeat;
+}
+
+/*--------------------------------------
+	4-4-2. dl.others
+---------------------------------------*/
+
+body.double div#utilities dl.others {
+	padding-top: 0;
+	background: #f5f5f5 url(images/interface/bg_dl-others.gif) no-repeat;
+}
+
+body.double div#utilities dl.others dt {
+	margin: 0 2px;
+	padding: 0 13px;
+}
+
+body.double div#utilities dl.others dd {
+	margin: 0.7em 0 0.5em;
+	padding: 0;
+}
+
+body.double div#utilities dl.others dd dl dd {
+	margin: 0.2em 10px 0.2em 10px;
+}
+
+body.double div#utilities dl.others dd ul {
+	margin: 0 0 0 24px;
+}
+
+body.double div#utilities dl.others dd ul li ul {
+	margin: 0 0 0 10px;
+}
+
+/*	4-4-2-1. Search
+---------------------------------------*/
+
+body.double div#utilities dl dd form {
+	margin-top: 12px;
+}
+
+body.double div#utilities dl dd form fieldset {
+	margin-left: 12px;
+	border: none;
+}
+
+body.double div#utilities dl dd form legend {
+	display: none;
+}
+
+body.double div#utilities dl dd form input {
+	margin-left: 0;
+}
+
+body.double div#utilities dl dd form input.inputField {
+
+}
+
+/*	4-4-2-2. Feeds
+---------------------------------------*/
+
+body.double div#utilities li.atom,
+body.double div#utilities li.rss {
+	margin-left: 0;
+}
+
+/*--------------------------------------
+	4-4-3. div#utilities dl > dd > *
+---------------------------------------*/
+
+/*	4-4-3-1. dd > p
+-----------------------------*/
+
+body.double div#utilities dl dd p {
+	margin: 0.6em 13px 0.4em 18px;
+	line-height: 1.4;
+	color: #999;
+	font-size: 85%;
+	font-family: "ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3";
+}
+
+/*	4-4-3-2. dd > list
+-----------------------------*/
+
+body.double body.double div#utilities dl dd dl dt {
+	margin: 0.3em 0;
+	background-color: #eee;
+	font-size: 12px;
+}
+
+body.double div#utilities dl dd dl dt a {
+	text-decoration: none;
+}
+
+body.double div#utilities dl dd dl dd {
+	margin: 0.1em 5px;
+	font-size: 12px;
+}
